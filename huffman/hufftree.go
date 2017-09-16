@@ -1,16 +1,21 @@
 package huffman
 
-type hufftree struct {
-	root *huffnode
+type HuffTree struct {
+	root *HuffNode
 }
 
-type huffnode struct {
-	left *huffnode
-	right *huffnode
-	data uint8
+type HuffNode struct {
+	left *HuffNode
+	right *HuffNode
+	num uint8 // stores the occurrences of char or all children
+	char uint8 // stores the ASCII-E character code for leaf node
 }
 
+func (tree *HuffTree) insert(node *HuffNode) {
+	// TODO: implement insertion of nodes
+}
 
-func (tree hufftree) insert(node *huffnode) {
-	// TODO: implement insert
+func (node *HuffNode) next(dir bool) (ret *HuffNode) {
+	// TODO: implement traversal of tree
+	return
 }
